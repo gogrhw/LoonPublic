@@ -9,4 +9,4 @@
 hostname=raw.githubusercontent.com, gist.githubusercontent.com
 
 [Script]
-http-request ^https?:\/\/(raw|gist)\.githubusercontent.com script-path=GitHubPrivateRepo.js, tag=Github Private
+http-request ^https?:\/\/(raw|gist)\.githubusercontent.com script-path=https://raw.githubusercontent.com/gogrhw/LoonPublic/refs/heads/main/Script/GitHubPrivateRepo.js, tag=Github Private
