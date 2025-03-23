@@ -3,7 +3,7 @@
 #!author = gogrhw
 #!input = github_username
 #!input = github_token
-#!icon = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github.png
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
 
 [MITM]
 hostname=raw.githubusercontent.com, gist.githubusercontent.com
