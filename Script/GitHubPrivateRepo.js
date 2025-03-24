@@ -1,6 +1,6 @@
 let config = {
-  username: $persistentStore.read("github_username"),
-  token: $persistentStore.read("github_token"),
+  username: $argument.Username,
+  token: $argument.Token,
 };
 
 const username = $request.url.match(
