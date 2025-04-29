@@ -1,0 +1,14 @@
+#!name = GitHub Pro
+#!desc = 1，访问私人仓库；2，解除 429 限制。
+#!author = gogrhw
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+
+[Argument]
+Username = input,tag=用户名
+Token = input,tag=Token
+
+[Script]
+http-request ^https?:\/\/(raw|gist)\.githubusercontent.com script-path=https://raw.githubusercontent.com/gogrhw/LoonPublic/refs/heads/main/Script/GitHubPro.js, argument=[{Username},{Token}], tag=Github Pro
+
+[MITM]
+hostname=raw.githubusercontent.com, gist.githubusercontent.com
