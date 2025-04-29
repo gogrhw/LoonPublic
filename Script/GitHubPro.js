@@ -9,7 +9,7 @@ const username = $request.url.match(
 
 let newHeaders = { ...$request.headers };
 
-newHeaders["Accept-Language"] = "en-us";
+newHeaders["accept-language"] = "en-us";
 
 if (username == config.username) {
   console.log(`ACCESSING PRIVATE REPO: ${$request.url}`);
