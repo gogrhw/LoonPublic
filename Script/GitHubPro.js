@@ -7,12 +7,19 @@ const username = $request.url.match(
   /https:\/\/(?:raw|gist)\.githubusercontent\.com\/([^\/]+)\//
 )[1];
 
-let newHeaders = { ...$request.headers };
+let newHeaders = {};
 
-newHeaders["accept-language"] = "en-us";
+for (let key in $request.headers) {
+  if (key.toLowerCase() === "accept-language") {
+    newHeaders[key] = "en-us";
+  } else {
+    newHeaders[key] = $request.headers[key];
+  }
+}
 
-if (username == config.username) {
-  newHeaders["authorization"] = `token ${config.token}`;
+if (username === config.username) {
+  console.log(`ACCESSING PRIVATE REPO: ${$request.url}`);
+  newHeaders["Authorization"] = `token ${config.token}`;
 }
 
 $done({ headers: newHeaders });
